@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArtView One Page Layout</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Tambahkan scroll behavior agar smooth scroll berfungsi */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .horizontal-line {
+      height: 4px;
+      width: 100%;
+      background-color: #38bdf8;
+      opacity: 100%;
+    }
+
+    .horizontal-line2 {
+      height: 4px;
+      width: 100%;
+      background-color: #22d3ee;
+      opacity: 100%;
+    }
+
+    .line-abstract {
+    background-image: linear-gradient(to right, #3b82f6, #a855f7, #D53F8C);
+    height: 2px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-size: 200% 100%;
+    animation: random-move 8s ease-in-out infinite;
+}
+
+@keyframes random-move {
+    0% {
+        background-position: 0% 0;
+    }
+    25% {
+        background-position: 50% 0;
+    }
+    50% {
+        background-position: 25% 0;
+    }
+    75% {
+        background-position: 75% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+
+  </style>
+</head>
+<body class="relative bg-gray-100 line-abstract">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-20">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#home" class="text-2xl font-extrabold uppercase tracking-widest bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">ArtView</a>
+      <div class="flex space-x-4">
+        <div class="flex items-center lg:hidden">
+          <div id="hamburger" class="text-gray-600 hover:rounded-full hover:text-blue-600 focus:outline-none">
+            <a href="#">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hidden lg:flex lg:space-x-4">
+          <a href="#home" class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-500 hover:text-white">Home</a>
+          <a href="#Pendahuluan" class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-purple-500 hover:text-white">Pendahuluan</a>
+          <a href="#Koleksi" class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-pink-500 hover:text-white">Koleksiku</a>
+          <a href="#Contact" class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-cyan-500 hover:text-white">Contact</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="Menu" class="hidden lg:hidden px-4 pt-2 pb-3 space-y-1">
+      <a href="#home" class="block text-gray-700 hover:bg-blue-500 hover:text-white px-3 py-2 rounded-md">Home</a>
+      <a href="#Pendahuluan" class="block text-gray-700 hover:bg-purple-500 hover:text-white px-3 py-2 rounded-md">Pendahuluan</a>
+      <a href="#Koleksi" class="block text-gray-700 hover:bg-pink-500 hover:text-white px-3 py-2 rounded-md">Koleksiku</a>
+      <a href="#Contact" class="block text-gray-700 hover:bg-cyan-500 hover:text-white px-3 py-2 rounded-md">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="home" class="container min-h-screen mx-auto  py-12 pt-24">
+    
+    <section class="mb-24 min-h-screen items-center justify-center">
+      <div class="relative flex flex-col justify-center items-center space-y-4 ">
+        <div class="horizontal-line"></div>
+        <h2 class="text-3xl italic font-semibold text-center mb-8 tracking-widest bg-gradient-to-r from-sky-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">Jelajahi lebih dalam tentang alam melalui gambar</h2>
+        <div class="horizontal-line2"></div>
+        <div class="w-full max-w-xl mx-auto relative">
+          <video class="w-full h-full rounded-lg shadow-lg" autoplay loop muted>
+            <source src="./asset/home.mp4" type="video/mp4">
+          </video>
+        </div>
+        <a href="#Pendahuluan" class="text-2xl font-bold text-center pt-8 mt-4 hover:text-cyan-400">Next</a>
+      </div>
+    </section>
+
+    
+    <section id="Pendahuluan" class=" relative w-full min-h-screen flex items-center justify-center">
+      <div class="absolute inset-0 pointer-events-none">
+        
+    </div>
+      <div class="bg-white p-4  rounded-lg shadow-lg w-11/12 md:w-4/5 h-auto z-10">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="md:w-1/2 md:mb-0">
+            <h2 class="text-3xl font-semibold italic text-left ml-2 mb-6  bg-gradient-to-r text-gray-600">Pendahuluan</h2>
+            <p class="text-left justify-start mb-4">Seni melalui lingkungan dapat diartikan sebagai karya seni yang mengeksplorasi hubungan antara manusia dan alam, serta bertujuan untuk meningkatkan kesadaran dan menginspirasi perubahan. <a href="#home" class="tracking-widest"><u>ARTVIEW</u></a> dibuat untuk membagikan keindahan alam yang disajikan dalam seni berbentuk <i>Foto</i></p>
+            <a href="#Koleksi" class="text-1xl font-bold font-sans hover:text-blue-500"><u>Lihat koleksi</u></a>
+          </div>
+          
+          <div class="md:w-1/2">
+            <img src="./asset/curug.jpg" alt="Placeholder Image" class="h-64 w-full object-cover rounded-lg">
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <div id="Koleksi" class="container mx-auto px-6 py-12">
+      <h1 class="text-4xl font-bold text-cyan-300 text-center mb-4 mt-6 pt-8 uppercase tracking-widest">Koleksiku</h1>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 py-8">
+          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+              <img src="./asset/badsky.jpg" alt="Gambar 1" class="w-full h-48 object-cover grayscale scale-90 hover:scale-100 hover:grayscale-0 transform transition-all duration-300 ease-in-out">
+              <h2 class="text-center text-xl font-semibold mt-4">BadSky</h2>
+              <p class="p-4 -mt-2 text-center text-gray-700">Penampakan langit yang bercampur dengan asap kotor</p>
+          </div>
+          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+              <img src="./asset/bch.jpg" alt="Gambar 2" class="w-full h-48 object-cover grayscale scale-90 hover:scale-100 hover:grayscale-0 transform transition-all duration-300 ease-in-out">
+              <h2 class="text-center text-xl font-semibold mt-4">BeachPlant</h2>
+              <p class="p-4 -mt-2 text-center text-gray-700">Keindahan tanaman dengan latar belakang pantai yang indah</p>
+          </div>
+          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+              <img src="./asset/Hutan.jpg" alt="Gambar 3" class="w-full h-48 object-cover grayscale scale-90 hover:scale-100 hover:grayscale-0 transform transition-all duration-300 ease-in-out">
+              <h2 class="text-center text-xl font-semibold mt-4">TheJungle</h2>
+              <p class="p-4 -mt-2 text-center text-gray-700">Keasrian sebuah hutan yang masih terjaga dengan baik</p>
+          </div>
+          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+              <img src="./asset/moon.jpg" alt="Gambar 4" class="w-full h-48 object-cover grayscale scale-90 hover:scale-100 hover:grayscale-0 transform transition-all duration-300 ease-in-out">
+              <h2 class="text-center text-xl font-semibold mt-4">FullMoon</h2>
+              <p class="p-4 -mt-2 text-center text-gray-700">Keberuntungan dapat memotret bulan seindah ini walau dari jauh</p>
+          </div>
+          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+            <img src="./asset/woodrod.jpg" alt="Gambar 11" class="w-full h-48 object-cover grayscale scale-90 hover:scale-100 hover:grayscale-0 transform transition-all duration-300 ease-in-out">
+            <h2 class="text-center text-xl font-semibold mt-4">WoodRood</h2>
+            <p class="p-4 -mt-2 text-center text-gray-700">Kondisi kayu lapuk diatas keramaian jalan raya</p>
+        </div>
+          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+              <img src="./asset/Halftree.jpg" alt="Gambar 6" class="w-full h-48 object-cover grayscale scale-90 hover:scale-100 hover:grayscale-0 transform transition-all duration-300 ease-in-out">
+              <h2 class="text-center text-xl font-semibold mt-4">HalfTree</h2>
+              <p class="p-4 -mt-2 text-center text-gray-700">Perpaduan pepohonan dan langit dengan proporsi yang seimbang</p>
+          </div>
+          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+              <img src="./asset/notaurora.jpg" alt="Gambar 7" class="w-full h-48 object-cover grayscale scale-90 hover:scale-100 hover:grayscale-0 transform transition-all duration-300 ease-in-out">
+              <h2 class="text-center text-xl font-semibold mt-4">AuroraImitation</h2>
+              <p class="p-4 -mt-2 text-center text-gray-700">Keindahan langit yang menyerupai aurora</p>
+          </div>
+          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+              <img src="./asset/redsky.jpg" alt="Gambar 8" class="w-full h-48 object-cover grayscale scale-90 hover:scale-100 hover:grayscale-0 transform transition-all duration-300 ease-in-out">
+              <h2 class="text-center text-xl font-semibold mt-4">RedSky</h2>
+              <p class="p-4 -mt-2 text-center text-gray-700">Keindahan langit sore diatas persawahan</p>
+          </div>
+          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+              <img src="./asset/sch.jpg" alt="Gambar 9" class="w-full h-48 object-cover grayscale scale-90 hover:scale-100 hover:grayscale-0 transform transition-all duration-300 ease-in-out">
+              <h2 class="text-center text-xl font-semibold mt-4">School</h2>
+              <p class="p-4 -mt-2 text-center text-gray-700">Suasana langit pagi disekolah</p>
+          </div>
+          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+              <img src="./asset/sore.jpg" alt="Gambar 10" class="w-full h-48 object-cover grayscale scale-90 hover:scale-100 hover:grayscale-0 transform transition-all duration-300 ease-in-out">
+              <h2 class="text-center text-xl font-semibold mt-4">SkySet</h2>
+              <p class="p-4 -mt-2 text-center text-gray-700">Perpaduan langit sore dengan keadaan diatas jalanan</p>
+          </div>
+          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+              <img src="./asset/saukurasch.jpg" alt="Gambar 11" class="w-full h-48 object-cover grayscale scale-90 hover:scale-100 hover:grayscale-0 transform transition-all duration-300 ease-in-out">
+              <h2 class="text-center text-xl font-semibold mt-4">SakuraSchool</h2>
+              <p class="p-4 -mt-2 text-center text-gray-700">Pemandangan bunga sakura palsu di sekolahku</p>
+          </div>
+          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+              <img src="./asset/sstbrdg.jpg" alt="Gambar 11" class="w-full h-48 object-cover grayscale scale-90 hover:scale-100 hover:grayscale-0 transform transition-all duration-300 ease-in-out">
+              <h2 class="text-center text-xl font-semibold mt-4">SunsetBridge</h2>
+              <p class="p-4 -mt-2 text-center text-gray-700">Pemandangan sunset yang diambil dari atas jembatan</p>
+          </div>
+      </div>
+
+    <section id="Contact" class="flex items-center justify-center mt-14">
+      <div>
+        <h2 class="text-4xl font-bold text-center mb-8 hover:text-cyan-300">This Is Me</h2>
+        <div class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow-lg overflow-hidden p-6">
+          <img src="./asset/Adit.png" alt="" class="w-28 h-36 object-cover rounded-full mb-6 md:mb-0 md:mr-6">
+          <div>
+            <h3 class="text-xl font-bold">Rifqi Aditya Rachman</h3>
+            <p class="text-gray-600 mb-4">Hanya hobi memotret sesuatu yang indah dan mendengarkan musik untuk menenangkan.</p>
+            <a href="https://wa.me/6285875595727." class="text-blue-500 hover:text-blue-700 font-semibold">Whatsapp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; 2024 ArtView. All rights reserved.</p>
+      <p>Follow us on 
+        <a href="https://www.instagram.com/adtty.aaaa/profilecard/?igsh=MWtraGpkZnpreGtsZg==" class="text-blue-400 hover:text-blue-600">Instagram</a> | 
+        <a href="https://www.facebook.com/share/nruN7J5dNZkmZpbu/" class="text-blue-400 hover:text-blue-600">Facebook</a> | 
+        <a href="https://www.threads.net/@adtty.aaaa" class="text-blue-400 hover:text-blue-600">Threads</a>
+      </p>
+    </div>
+  </footer>
+  
+  <script>
+
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('Menu');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
